@@ -21,8 +21,8 @@ public class PipesController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {		
+		FlappyPipes ();
 		CheckPipesPosition ();
-		MovePipes ();
 	}
 
 	void CheckPipesPosition() {
@@ -32,14 +32,12 @@ public class PipesController : MonoBehaviour {
 		}
 	}
 
-	void MovePipes() {
-		if (Input.GetKeyDown (KeyCode.Space) && transform.position.y < maxY) {
-			FlappyPipes ();
+	void FlappyPipes() {		
+		if (Input.GetKeyDown (KeyCode.Space) && transform.position.y < maxY) {			
+			rigidBody2d.velocity = Vector2.up * pipesVelocity;
+			rigidBody2d.constraints = RigidbodyConstraints2D.None;
 		}
 	}
 
-	void FlappyPipes() {
-		rigidBody2d.velocity = Vector2.up * pipesVelocity;
-	}
 
 }
