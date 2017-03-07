@@ -28,14 +28,13 @@ public class PipesController : MonoBehaviour {
 	void CheckPipesPosition() {
 		if (transform.position.y < minY) {			
 			rigidBody2d.constraints = RigidbodyConstraints2D.FreezePositionY;
-			Debug.Log ("Game Over!!!");
+			Manager.gameOver = true;
 		}
 	}
 
 	void FlappyPipes() {		
-		if (Input.GetKeyDown (KeyCode.Space) && transform.position.y < maxY) {			
+		if (Input.GetKeyDown (KeyCode.Space) && transform.position.y < maxY) {
 			rigidBody2d.velocity = Vector2.up * pipesVelocity;
-			rigidBody2d.constraints = RigidbodyConstraints2D.None;
 		}
 	}
 

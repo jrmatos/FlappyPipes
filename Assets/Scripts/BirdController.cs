@@ -14,8 +14,8 @@ public class BirdController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pos = transform.position;
-		birdVelocity = 0.08f;
 
+		// get screen border
 		screenBorderLeft = Camera.main.ViewportToWorldPoint (new Vector2 (0, 0));
 	}
 	
@@ -26,12 +26,11 @@ public class BirdController : MonoBehaviour {
 	}
 
 	void move() {
-		pos.x = pos.x - birdVelocity;
+		pos.x = pos.x - (birdVelocity * Time.deltaTime);
 		transform.position = pos;
 	}
 
-	void DestroyOutOfWorld(){
-		
+	void DestroyOutOfWorld(){		
 		if (transform.position.x < screenBorderLeft.x) {			
 			Destroy (gameObject);
 		}

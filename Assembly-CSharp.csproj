@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BirdController.cs" />
      <Compile Include="Assets\Scripts\BirdsManager.cs" />
+     <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\PipesController.cs" />
      <Compile Include="Assets\Scripts\ScrollTexture.cs" />
  <Reference Include="UnityEngine.UI">
