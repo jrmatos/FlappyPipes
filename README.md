@@ -2,4 +2,4 @@
 
 
 --
-MIT LICENSED
+MIT Licensed
