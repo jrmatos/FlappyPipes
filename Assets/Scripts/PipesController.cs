@@ -28,6 +28,8 @@ public class PipesController : MonoBehaviour {
 	void CheckPipesPosition() {
 		if (transform.position.y < minY) {			
 			rigidBody2d.constraints = RigidbodyConstraints2D.FreezePositionY;
+
+			// game over
 			Manager.gameOver = true;
 		}
 	}
