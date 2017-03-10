@@ -25,6 +25,12 @@ public class PipesController : MonoBehaviour {
 		CheckPipesPosition ();
 	}
 
+	void OnCollisionEnter2D(Collision2D collider) {
+		if(collider.gameObject.tag == "bird") {
+			Manager.gameOver = true;
+		}
+	}
+
 	void CheckPipesPosition() {
 		if (transform.position.y < (minY - 5.0f)) {			
 			rigidBody2d.constraints = RigidbodyConstraints2D.FreezePositionY;
