@@ -23,6 +23,11 @@ public class BirdController : MonoBehaviour {
 	void Update () {
 		move ();
 		DestroyOutOfWorld ();
+
+		if (transform.position.x < -10) {
+			Destroy (gameObject);
+		}
+
 	}
 
 	void move() {

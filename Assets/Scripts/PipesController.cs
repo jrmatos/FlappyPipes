@@ -25,11 +25,11 @@ public class PipesController : MonoBehaviour {
 		CheckPipesPosition ();
 	}
 
-	void OnCollisionEnter2D(Collision2D collider) {
+	/*void OnCollisionEnter2D(Collision2D collider) {
 		if(collider.gameObject.tag == "bird") {
 			Manager.gameOver = true;
 		}
-	}
+	}*/
 
 	void CheckPipesPosition() {
 		if (transform.position.y < (minY - 5.0f)) {			

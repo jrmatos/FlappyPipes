@@ -6,6 +6,8 @@ public class Manager : MonoBehaviour {
 
 	public static bool gameOver;
 
+	public static int score;
+
 	// Use this for initialization
 	void Start () {
 		gameOver = false;
@@ -16,5 +18,9 @@ public class Manager : MonoBehaviour {
 		if (gameOver) {
 			Time.timeScale = 0;
 		}
+	}
+
+	public static void addScore() {
+		score++;
 	}
 }
