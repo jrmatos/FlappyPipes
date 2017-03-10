@@ -18,7 +18,7 @@ public class BirdsManager : MonoBehaviour {
 
 	void GenerateBirds() {
 		GameObject bird = (GameObject)Instantiate (Bird);
-		bird.transform.position = new Vector2 (10,Random.Range (4f, -2f));
+		bird.transform.position = new Vector3 (10,Random.Range (4f, -2f), -1.5f);
 	}
 
 }
