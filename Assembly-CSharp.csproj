@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\PipeCollision.cs" />
      <Compile Include="Assets\Scripts\PipesController.cs" />
+     <Compile Include="Assets\Scripts\ResumeGame.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\ScrollTexture.cs" />
