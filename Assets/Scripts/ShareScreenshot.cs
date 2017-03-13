@@ -58,7 +58,7 @@ public class ShareScreenshot : MonoBehaviour {
 	public void NativeShareScreenshot() {
 		AndroidJavaClass jc 
 		= new AndroidJavaClass (
-			"br.edu.posgames.flappybird.NativeScreenshot"
+			"br.edu.ueaposgames.flappypipes"
 		);
 
 		jc.CallStatic ("ShareScreenshot", GetCurrentActivity());
