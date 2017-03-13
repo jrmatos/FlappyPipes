@@ -10,11 +10,13 @@ public class Manager : MonoBehaviour {
 	public static int score;
 
 	CanvasGroup canvasGroup;
+	CanvasGroup shareScreenshotButton;
 
 	// Use this for initialization
 	void Start () {
 		gameOver = false;
 		canvasGroup = GameObject.Find("PlayButton").GetComponent<CanvasGroup>();
+		shareScreenshotButton = GameObject.Find ("ShareScreenshotButton").GetComponent<CanvasGroup> ();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +26,10 @@ public class Manager : MonoBehaviour {
 			canvasGroup.alpha = 1f;
 			canvasGroup.interactable = true;
 			canvasGroup.blocksRaycasts = true;
+
+			shareScreenshotButton.alpha = 1f;
+			shareScreenshotButton.interactable = true;
+			shareScreenshotButton.blocksRaycasts = true;
 		}
 	}
 
