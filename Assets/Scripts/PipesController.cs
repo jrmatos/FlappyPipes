@@ -39,9 +39,16 @@ public class PipesController : MonoBehaviour {
 			Manager.gameOver = true;
 		}
 	}
-
+	/*
 	void FlappyPipes() {		
 		if (Input.GetKeyDown (KeyCode.Space) && transform.position.y < maxY) {
+			rigidBody2d.velocity = Vector2.up * pipesVelocity;
+		}
+	}
+	*/
+
+	void FlappyPipes() {		
+		if (Input.GetMouseButtonDown (0) && transform.position.y < maxY) {
 			rigidBody2d.velocity = Vector2.up * pipesVelocity;
 		}
 	}
